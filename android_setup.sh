@@ -1,4 +1,3 @@
-
 if [ "$(whoami)" == "root" ]; then
     printf "Must be run without sudo\n"
     exit -1
@@ -31,9 +30,10 @@ sudo wget https://dl.google.com/android/repository/platform-23_r03.zip
 sudo wget https://dl.google.com/android/repository/sys-img/android/x86_64-23_r09.zip
 sudo wget https://dl.google.com/android/repository/sys-img/google_apis/x86_64-23_r18.zip
 
-mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23
-mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23/default
-mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23/google_apis
+mkdir /home/"$(whoami)"/Android/Sdk/system-images
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-231
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-231/default
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-231/google_apis
 
 unzip x86-23_r09.zip -d /home/"$(whoami)"/Android/Sdk/system-images/android-23/default/
 unzip x86_64-23_r09.zip -d /home/"$(whoami)"/Android/Sdk/system-images/android-23/default/
