@@ -22,8 +22,8 @@ sudo rm android-studio-ide-145.3360264-linux.zip
 /opt/android-studio/bin/studio.sh
 
 echo "export ANDROID_HOME=~/Android/Sdk" >> ~/.bashrc
-echo "export PATH=${PATH}:${ANDROID_HOME}/tools" >> ~/.bashrc
-echo "export PATH=${PATH}:${ANDROID_HOME}/platform-tools" >> ~/.bashrc
+echo "export PATH=\${PATH}:\${ANDROID_HOME}/tools" >> ~/.bashrc
+echo "export PATH=\${PATH}:\${ANDROID_HOME}/platform-tools" >> ~/.bashrc
 
 sudo wget https://dl.google.com/android/repository/google_apis-23_r01.zip
 sudo wget https://dl.google.com/android/repository/sys-img/android/x86-23_r09.zip
@@ -31,11 +31,15 @@ sudo wget https://dl.google.com/android/repository/platform-23_r03.zip
 sudo wget https://dl.google.com/android/repository/sys-img/android/x86_64-23_r09.zip
 sudo wget https://dl.google.com/android/repository/sys-img/google_apis/x86_64-23_r18.zip
 
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23/default
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23/google_apis
+
 unzip x86-23_r09.zip -d /home/"$(whoami)"/Android/Sdk/system-images/android-23/default/
 unzip x86_64-23_r09.zip -d /home/"$(whoami)"/Android/Sdk/system-images/android-23/default/
 unzip x86_64-23_r18.zip -d /home/"$(whoami)"/Android/Sdk/system-images/android-23/google_apis/
 unzip google_apis-23_r01.zip -d /home/"$(whoami)"/Android/Sdk/add-ons/
-unzip platform-23_r03.zip -d /home/justman/Android/Sdk/platforms
+unzip platform-23_r03.zip -d /home/"$(whoami)"/Android/Sdk/platforms
 
 sudo rm x86-23_r09.zip
 sudo rm x86_64-23_r09.zip
