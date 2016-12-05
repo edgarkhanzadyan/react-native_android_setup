@@ -27,7 +27,6 @@ echo "export JAVA_HOME=/opt/jdk1.8.0_111/" >> ~/.bashrc
 echo "export CLASSPATH=\${JAVA_HOME}/lib" >> ~/.bashrc
 echo "export PATH=\${PATH}:\${JAVA_HOME}/bin" >> ~/.bashrc
 
-sudo wget http://download.oracle.com/otn-pub/java/jdk/8u111-b14/jdk-8u111-linux-x64.tar.gz
 sudo wget https://dl.google.com/android/repository/google_apis-23_r01.zip
 sudo wget https://dl.google.com/android/repository/sys-img/android/x86-23_r09.zip
 sudo wget https://dl.google.com/android/repository/platform-23_r03.zip
@@ -38,9 +37,6 @@ mkdir /home/"$(whoami)"/Android/Sdk/system-images
 mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23
 mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23/default
 mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23/google_apis
-
-tar -zxvf jdk-8u111-linux-x64.tar.gz -d /opt/
-rm jdk-8u111-linux-x64.tar.gz
 
 unzip x86-23_r09.zip -d /home/"$(whoami)"/Android/Sdk/system-images/android-23/default/
 unzip x86_64-23_r09.zip -d /home/"$(whoami)"/Android/Sdk/system-images/android-23/default/
@@ -53,3 +49,5 @@ sudo rm x86_64-23_r09.zip
 sudo rm x86_64-23_r18.zip
 sudo rm google_apis-23_r01.zip
 sudo rm platform-23_r03.zip
+
+sudo apt-get install lib32stdc++6 lib32z1
