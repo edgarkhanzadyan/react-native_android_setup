@@ -35,9 +35,9 @@ sudo wget https://dl.google.com/android/repository/sys-img/android/x86_64-23_r09
 sudo wget https://dl.google.com/android/repository/sys-img/google_apis/x86_64-23_r18.zip
 
 mkdir /home/"$(whoami)"/Android/Sdk/system-images
-mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-231
-mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-231/default
-mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-231/google_apis
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23/default
+mkdir /home/"$(whoami)"/Android/Sdk/system-images/android-23/google_apis
 
 tar -zxvf jdk-8u111-linux-x64.tar.gz -d /opt/
 rm jdk-8u111-linux-x64.tar.gz
