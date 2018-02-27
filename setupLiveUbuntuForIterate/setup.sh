@@ -10,6 +10,7 @@ cd ~/Documents
 wget https://atom.io/download/deb
 sudo dpkg -i deb
 echo "install cmatrix"
+sudo add-apt-repository universe
 sudo apt-get update
 sudo apt-get install cmatrix
 echo "RUN CMATRIX"
